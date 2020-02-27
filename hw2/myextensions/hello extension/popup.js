@@ -4,15 +4,12 @@
 
 'use strict';
 
-function click(e) {
-  chrome.tabs.executeScript(null,
-      {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
-  window.close();
+function keyup(e) {
+  var name = document.getElementById("name").value;
+  document.getElementById('greet').innerText='Hello ' + name;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var divs = document.querySelectorAll('div');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', click);
-  }
+  var input = document.querySelector('input');
+  input.addEventListener('keyup', keyup);
 });
