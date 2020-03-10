@@ -1,0 +1,27 @@
+{
+  "name": "Replace string",
+  "description": "Replace string",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.chrome.com/extensions"
+      ],
+      "js": [
+        "js/jquery-3.4.1.min.js",
+        "js/replace.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png"
+  },
+  "manifest_version": 2
+}

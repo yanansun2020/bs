@@ -1,0 +1,23 @@
+{
+  "name": "Replace Chrome with Firefox",
+  "description": "Replace Chrome with Firefox",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.chrome.com/extensions"
+      ],
+      "js": [
+        "jquery-3.4.1.min.js",
+        "replace.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "firefox.png"
+  },
+  "icons": {
+    "16": "firefox.png"
+  },
+  "manifest_version": 2
+}
