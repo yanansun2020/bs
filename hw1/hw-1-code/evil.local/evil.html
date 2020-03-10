@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+			var xhr = new XMLHttpRequest();
+			xhr.onerror = xhr.onload = function () {
+				document.body.innerHTML = "<p>" + xhr.responseText + "</p>";
+			}
+
+			xhr.open("GET", "http://bank.local:3000/viewbalance");
+			xhr.setRequestHeader('X-Custom-Header', '14828');
+			xhr.withCredentials = true;
+			xhr.send();    
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

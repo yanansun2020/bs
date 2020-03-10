@@ -1,0 +1,12 @@
+user_to=a&amount=0
+
+
+
+{"username":"1@1.com","passwordhash":"$2b$06$iI3mgMLtsaOBB0kse5NEhu5oMznBhAQ6S3umVFwSrFqXDW9uEl4NK","money":1}
+
+http://192.168.2.83:5004/transfer
+user_to=1%401.com&amount=1
+
+http://192.168.2.83:5004/transfer?user_to=1@1.com&amount=10
+
+wget --post-data 'user_to=1@1.com&amount=1000' http://192.168.2.83:5004/transfer

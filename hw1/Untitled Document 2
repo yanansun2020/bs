@@ -1,0 +1,1 @@
+script-src 'nonce-1ae622325525613c0fb678391806c2a1'; object-src 'none'; require-trusted-types-for 'script';

