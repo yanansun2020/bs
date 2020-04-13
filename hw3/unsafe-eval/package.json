@@ -1,0 +1,15 @@
+{
+  "name": "insecure_components",
+  "version": "1.0.0",
+  "description": "I made an online YAML to JSON converter! Hope it's still running fine now... ",
+  "author": "Wai Tuck Wong <wtwong@splunk.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "safe-eval": "^0.3.0"
+  }
+}
