@@ -1,0 +1,15 @@
+{
+  "name": "Change UA",
+  "description": "Change UA",
+  "version": "2.0",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": true
+  },
+  "manifest_version": 2
+}
