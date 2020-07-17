@@ -38,3 +38,12 @@ vm.runInContext(code, context)
 //unsafe eval
 code = "require('child_process').execSync('ls /tmp/');"
 eval(code).toString()
+
+//unsafe eval:
+let execTest = "require('child_process').execSync('ls /');"
+execTest = eval(execTest).toString();
+code = "this.constructor.constructor('return execTest')()"
+
+
+code ="this. constructor.constructor('return secret')()"
+code="this.constructor=undefined;" + code;

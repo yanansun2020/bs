@@ -4,9 +4,11 @@
 
 **1.1  Set up REPL**
 
-![image-20200408163920855](/home/yanan/.config/Typora/typora-user-images/image-20200408163920855.png)
+![image-20200415172038096](/home/yanan/.config/Typora/typora-user-images/image-20200415172038096.png)
 
 <div style="page-break-after: always; break-after: page;"></div>
+
+
 
 **1.2** **VM context experiment**
 
@@ -170,15 +172,17 @@ For example in the given snippet , it is obvious that `x`, `x_prime`, `obj` are 
 
 **2.4 Implicit Flows II** 
 
-(1)  `x_prime` is not directly assigned to obj, but by an attribute in obj, which is obj.lol;
+When a data flow is caused by assignment, it should be considered as direct flow, but the one I mentioned before has following attributes which lead it to be considered as implicit flow.
 
-(2) `hacker` is determined by obj, obj.lol, obj.lol[idx] and test, this part is a control flow. 
+(1)  `x_prime` is not directly assigned to obj, but by an attribute in `obj`, which is `obj.lol`;
+
+(2) `hacker` is determined by `obj`, `obj.lol`, `obj.lol[idx]` and `test`, this part is a control flow. 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 **2.5 DFG**
 
-![0](/home/yanan/.config/Typora/typora-user-images/image-20200415151925630.png)
+![image-20200416101247794](/home/yanan/.config/Typora/typora-user-images/image-20200416101247794.png)
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -206,11 +210,11 @@ The other thing I'd like to mention is that the paper also mentioned ways to mit
 
 Hi instructors, I have `windows` and `Ubuntu` system on my 8.0GB RAM laptop, but unfortunately, I don't have enough space for the project.  The following figure is my disk usage on windows. In this situation I had to switch to using extensions.
 
-windows disk usage and  memory usage: 
+windows and ubuntu disk usage usage: 
 
 ![image-20200415163515434](/home/yanan/.config/Typora/typora-user-images/image-20200415163515434.png)
 
-
+![image-20200415172142352](/home/yanan/.config/Typora/typora-user-images/image-20200415172142352.png)
 
 <div style="page-break-after: always; break-after: page;"></div>
 

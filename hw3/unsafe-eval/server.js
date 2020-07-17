@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 
 
 app.post('/eval_to_json', (req, res) => {
-  var a ="";
+  /*var a ="";
   var nop ;
   if(a){
     nop = "nop" ;
@@ -34,7 +34,9 @@ app.post('/eval_to_json', (req, res) => {
   }
   var b = nop + nop ;
   console.log(b)
-
+*/
+  let code = "this.constructor.constructor"
+   code = "this.constructor = undefined;" + code
 
   var c = "cookie";
   var d = "1 + 1 = 3";
