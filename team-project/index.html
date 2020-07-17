@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Converting the Querystring in to JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<style>
+		textarea {
+			width: 100%;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+    <div id="page">		
+		<textarea id="json">		
+		</textarea>
+    </div> 
+
+	<script>
+		
+		function QueryStringToJSON() {			
+			var pairs = location.search.slice(1).split('&');
+			
+			var result = {};
+			pairs.forEach(function(pair) {
+				pair = pair.split('=');
+				result[pair[0]] = decodeURIComponent(pair[1] || '');
+			});
+
+			return JSON.parse(JSON.stringify(result));
+		}
+		
+		var qs = QueryStringToJSON();
+		
+		document.getElementById('json').innerText = JSON.stringify(qs);
+				
+	</script>
+</body>
+</html>
