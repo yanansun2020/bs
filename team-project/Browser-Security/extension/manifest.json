@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "ME",
+  "version": "1.0",
+  "description": "Extension for Project",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "webNavigation",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "/lib/fingerprint.js",
+      "/lib/socketio.js",
+      "/scripts/background/CommandExecutor.js",
+      "/scripts/background/identity.js",
+      "/scripts/background/connect.js",
+      "/scripts/background/events.js"
+    ],
+    "persistent": false
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["/scripts/content/messenger.js"]
+    }
+  ]
+}

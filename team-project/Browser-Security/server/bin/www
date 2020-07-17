@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const {httpServer} = require("../app")
+const {serverPort} = require("../config")
+
+
+httpServer.listen(serverPort, () => {
+  console.log("attacker server is binding on port " + serverPort)
+})
+
+
