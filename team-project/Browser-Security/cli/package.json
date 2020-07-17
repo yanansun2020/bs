@@ -23,7 +23,7 @@
     "commander": "^5.0.0",
     "esm": "^3.2.25",
     "inquirer": "^7.1.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "request": "^2.88.2",
     "string": "^3.3.3"
   }
